@@ -1,5 +1,14 @@
-// alert('Welcome to Royal Support Home Care Services :)');
-// alert('This site is still in development');
+alert('Welcome to Royal Support Home Care Services :)');
+alert('This site is still in development');
+
+let menu = document.querySelector('#menu');
+let navlink = document.querySelector('.navlink');
+
+menu.addEventListener('click', ()=>{
+    menu.classList.toggle('bx-x');
+    navlink.classList.toggle('active');
+})
+
 
 let care = document.querySelector('#care');
 let job = document.querySelector('#job');
@@ -11,13 +20,7 @@ job.addEventListener('click', ()=>{
     window.location.href = 'career.html'
 })
 
-let menu = document.querySelector('#menu');
-let navlink = document.querySelector('.navlink');
 
-menu.addEventListener('click', ()=>{
-    menu.classList.toggle('bx-x');
-    navlink.classList.toggle('active');
-})
 
 let right = document.querySelector('#right');
 

@@ -7,6 +7,20 @@
     <title>Royal Support HomeCare</title>
     <link rel="stylesheet" href="CSS/style.css">
 
+    
+    <meta name="description" content="">
+    <meta name="keywords" content="Royal Support Home Care, Royal Support, Home Care, Care, Home Care Agency,Companion Services,Personal care" />
+
+    <meta name="dcterms.description" content=""/>
+
+    <meta name="dcterms.publisher" content="Royal Support Home Care" />
+
+    <meta name="application-name" content="royalsupporthomecare.com" />
+
+    <meta name="dcterms.title" content="Royal Support Home Care" />
+<meta name="dcterms.contributor" content="Royal Support Home Care" />
+<meta name="dcterms.creator" content="royalsupporthomecare.com" />
+
 
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png" />
@@ -16,13 +30,64 @@
 
     <!-- BOXICONS -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+
+
+<style>
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #f7f9fb; */
+    background: rgba(0, 0, 0, 1.1);
+    background: linear-gradient(to top right,#1474C2,#1BEF54);
+    background: linear-gradient(to top right,rgba(100,176,243,.7),rgba(27,239,84,.7));
+    transition: opacity 2s, visibility 2s;
+    z-index: 9999;
+  }
+
+  .loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 3s ease-in-out;
+  }
+
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #ddd;
+    /* border-top-color: #0ef; */
+    border-top-color: #64B0F3,#1BEF54;
+    border-top-color: #64B0F3;
+    border-top-color: #000;
+
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+</style>
 
 </head>
 <body>
 
-    <style>
-      
-    </style>
+    <!-- LOADER -->
+    <!-- <div class="loader"></div> -->
 
     <header id="navbar">
         <div class="top_section">
@@ -36,17 +101,18 @@
                 <a href="mailto:"><i class="bx bxl-gmail"></i></a>
               </div>
         </div>
+        <div class="top_section_2"></div>
 
         <nav id="nav">
-            <img class="logo" src="image/logo.png" alt="">
+            <img class="logo" src="image/logo-min.png" alt="">
 
             <div class="navlink">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="service.html">Services</a>
-                <a href="career.html">Career</a>
-                <a href="#">Join Us</a>
-                <a href="#">Contact</a>
+                <a href="index.html" class="home_link">Home</a>
+                <a href="about.html" class="about_link">About Us</a>
+                <a href="service.html" class="service_link">Services</a>
+                <a href="">Career</a>
+                <a href="join.html" class="join_link">Join Us</a>
+                <a href="contact.html" class="contact_link">Contact</a>
             </div>
 
             <a href="#help" class="btn nav_btn">Get Started <i class='bx bx-right-arrow-alt' id="right"></i></a>
@@ -59,7 +125,7 @@
         <div class="main_content">
             <h3>Best Caregiving Services Available</h3>
             <p>We are commited to providing high quality client-centered services</p>
-            <a href="#" class="btn">START</a>
+            <a href="#message" class="btn">START</a>
         </div>
 
         <!-- <div class="main_image">
@@ -83,52 +149,53 @@
           </div>
        </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="services">
 
-        <div class="heading">
-            <h3> <span>Services</span> We Offer</h3>
-            <p>Comprehensive services put together to meet your unique home care needs</p>
-        </div>
-
-        <div class="services_container">
-
-            <div class="services_box">
-                <div class="box_image">
-                    <img src="image/male.png" alt="">
-                </div>
-
-                <div class="box_content">
-                    <h3>Companion Services</h3>
-                    <p>Meet friendly faces with genuine hearts.</p>
-                </div>
+        <!-- SERVICES SECTION 2 -->
+        <section class="service_section" id="service_section">
+            <div class="heading">
+                <h3> <span>Services</span> We Offer</h3>
+                <p>Comprehensive services put together to meet your unique home care needs</p>
             </div>
-
-            <div class="services_box">
-                <div class="box_image">
-                    <img src="image/service2.png" alt="">
+    
+            
+            <div class="service_container">
+                <div class="service_box">
+                  <a href="./services/companion.html"><img src="image/male-min.png" alt="" /></a>
+        
+                  <div class="service_content">
+                    <h4>Companion Services</h4>
+                    <p>Meet friendly faces with geniune hearts</p>
+                  </div>
                 </div>
-
-                <div class="box_content">
-                    <h3>Personal Care</h3>
-                    <p>Dependable support in your essentials</p>
+    
+                <div class="service_box">
+                   <a href="./services/personal.html"><img src="image/services_pic-min.jpg" alt="" /></a>
+          
+                    <div class="service_content">
+                      <h4>Personal Care</h4>
+                      <p>Dependable support in your essentials</p>
+                    </div>
+                  </div>
+        
+                <div class="service_box">
+                  <a href="./services/caregiver.html"><img src="image/new_image-min.jpg" alt="" /></a>
+        
+                  <div class="service_content">
+                    <h4>Live In Caregiver</h4>
+                    <p>First Hand care received at home</p>
+                  </div>
                 </div>
+      
+
+            </div>   
+            
+            <div class="service_button">
+              <a href="service.html" class="btn">View More</a>
             </div>
+        </section>
 
-            <!-- <div class="services_box">
-                <div class="box_image">
-                    <img src="image/service1.png" alt="">
-                </div>
 
-                <div class="box_content">
-                    <h3>Supported Living</h3>
-                    <p>Meet friendly faces with genuine hearts.</p>
-                </div>
-            </div> -->
 
-        </div>
-    </section>
-    `
     <!-- ABOUT SECTION -->
     <section class="about" id="about">
         <div class="about_content">
@@ -139,7 +206,7 @@
                 and met through the selective assignment of qualified, trustworthy and compassionate
                 personnel.
             </p>
-            <a href="#" class="btn">About Us</a>
+            <a href="about.html" class="btn">About Us</a>
         </div>
     </section>
 
@@ -170,7 +237,7 @@
             </div>
 
             <div class="help_box" id="job">
-                <h4>I'm Looking for Job</h4>
+                <h4>I'm Looking for a Job</h4>
                 <hr>
                 <i class='bx bxs-hand' ></i>
             </div>
@@ -185,7 +252,7 @@
             <p>Start a conversation with us today</p>
         </div>
 
-        <form action="" class="message_container">
+        <form action="mailto:bashirtaiwo59@gmail.com" method="post" enctype="multipart/form-data" class="message_container">
             <!-- <div class="message_box"> -->
                 <input
                 class="inputs"
@@ -241,9 +308,9 @@
                 <h3>CONTACT INFO</h3>
                 <p> You are one step away from your home care journey. Connect with us!</p>
               </div>
-              <p>Location: <span>26 VAN DYKE STREET, INDIANAPOLIS, IN, 46227</span></p>
-              <p>Phone: <span> 973-336-3413,<br> 463-270-3351,<br> 317-738-7347</span></p>
-              <p>Email: <span>royalhomecare544@gmail.com</span></p>
+              <p><i class='bx bxs-map' ></i> <span>26 VAN DYKE STREET, <br> INDIANAPOLIS, IN, 46227</span></p>
+              <p><i class='bx bxs-phone' ></i><span> 973-336-3413,<br> 463-270-3351,<br> 317-378-3747</span></p>
+              <p><i class='bx bxs-envelope' ></i><span>royalhomecare544@gmail.com</span></p>
             </div>
   
           </div>
@@ -253,39 +320,18 @@
 
 
       <section class="end" id="end">
-        <!-- <div class="contact_container">
-
-
-            <div class="contact_map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.3642753350705!2d-86.12838912431984!3d39.66401960110825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b5c84973ca133%3A0xcaa5a416a04a0b7f!2s26%20Van%20Dyke%20St%2C%20Indianapolis%2C%20IN%2046227%2C%20USA!5e0!3m2!1sen!2sng!4v1699525559520!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        
-            <div class="contact_content">
-              <div class="contact_heading">
-                <h4>GET IN TOUCH</h4>
-                <h3>CONTACT INFO</h3>
-                <p class="cont_p"> You are one step away from your home care journey. Connect with us!</p>
-              </div>
-              <p>Location: <span>26 VAN DYKE STREET, INDIANAPOLIS, IN, 46227</span></p>
-              <p>Phone: <span> 973-336-3413</span></p>
-              <p>Email: <span>royalhomecare544@gmail.com</span></p>
-            </div>
-  
-          </div>
-
-          <hr> -->
 
           <div class="footer_container">
             <div class="footer_link">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Services</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="service.html">Services</a>
                 <a href="#">Career</a>
-                <a href="#">Join Us</a>
-                <a href="#">Contact</a>
+                <a href="join.html">Join Us</a>
+                <a href="contact.html">Contact</a>
             </div>
 
-            <img class="logo" src="image/logo.png" alt="">
+            <img class="logo" src="image/logo-min.png" alt="">
 
             <p>Copyright &copy; 2023 | All Rights Reserved.</p>
           </div>
@@ -294,6 +340,10 @@
 
 
 
+      <!-- <script>
+        alert('Welcome to Royal Support Home Care Services');
+        alert('This site is still in development :)');
+      </script> -->
     <script src="JS/script.js"></script>
 </body>
 </html>

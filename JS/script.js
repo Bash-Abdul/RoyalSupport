@@ -1,5 +1,23 @@
-// alert('Welcome to Royal Support Home Care Services :)');
-// alert('This site is still in development');
+window.addEventListener('load',()=>{
+    const load = document.querySelector('.loader');
+
+    load.classList.add('loader-hidden');
+
+    load.addEventListener('transitionend', ()=>{
+        document.body.removeChild('loader');
+    })
+})
+
+
+let menu = document.querySelector('#menu');
+let navlink = document.querySelector('.navlink');
+
+
+menu.addEventListener('click', ()=>{
+    menu.classList.toggle('bx-x');
+    navlink.classList.toggle('active');
+})
+
 
 
 const pathName = window.location.pathname;
@@ -35,14 +53,6 @@ window.addEventListener('load',()=>{
 })
 
 
-let menu = document.querySelector('#menu');
-let navlink = document.querySelector('.navlink');
-
-
-menu.addEventListener('click', ()=>{
-    menu.classList.toggle('bx-x');
-    navlink.classList.toggle('active');
-})
 
 
 let care = document.querySelector('#care');

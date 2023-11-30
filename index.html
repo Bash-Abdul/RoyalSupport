@@ -14,6 +14,8 @@
 
     <meta name="dcterms.description" content="Helping people in our care live fuller and healthier lives is the reason Royal Support HomeCare exists. Services We Offer. Comprehensive services put ..."/>
 
+    <meta name="google-site-verification" content="ArrwURwuUTjk5JNdh3s48DMzSCdB2mPtt_HXjdmE1rU" />
+
     <meta name="dcterms.publisher" content="Royal Support Home Care" />
 
     <meta name="application-name" content="royalsupporthomecare.com" />
@@ -35,8 +37,165 @@
     <!-- BOXICONS -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+
+<style>
+
+.loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: #f7f9fb; */
+        background: rgba(0, 0, 0, 1.1);
+        background: rgba(255,255,255,1);
+        transition: opacity 2s, visibility 2s;
+        z-index: 9999;
+      }
+
+      .loader-hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 3s ease-in-out;
+      }
+
+.three-body {
+ --uib-size: 35px;
+ --uib-speed: 0.8s;
+ --uib-color: #1BEF54;
+ position: relative;
+ display: inline-block;
+ height: var(--uib-size);
+ width: var(--uib-size);
+ animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+}
+
+.three-body__dot {
+ position: absolute;
+ height: 100%;
+ width: 30%;
+}
+
+.three-body__dot:after {
+ content: '';
+ position: absolute;
+ height: 0%;
+ width: 100%;
+ padding-bottom: 100%;
+ background-color: var(--uib-color);
+ border-radius: 50%;
+}
+
+.three-body__dot:nth-child(1) {
+ bottom: 5%;
+ left: 0;
+ transform: rotate(60deg);
+ transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(1)::after {
+ bottom: 0;
+ left: 0;
+ animation: wobble1 var(--uib-speed) infinite ease-in-out;
+ animation-delay: calc(var(--uib-speed) * -0.3);
+}
+
+.three-body__dot:nth-child(2) {
+ bottom: 5%;
+ right: 0;
+ transform: rotate(-60deg);
+ transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(2)::after {
+ bottom: 0;
+ left: 0;
+ animation: wobble1 var(--uib-speed) infinite
+    calc(var(--uib-speed) * -0.15) ease-in-out;
+}
+
+.three-body__dot:nth-child(3) {
+ bottom: -5%;
+ left: 0;
+ transform: translateX(116.666%);
+}
+
+.three-body__dot:nth-child(3)::after {
+ top: 0;
+ left: 0;
+ animation: wobble2 var(--uib-speed) infinite ease-in-out;
+}
+
+@keyframes spin78236 {
+ 0% {
+  transform: rotate(0deg);
+ }
+
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes wobble1 {
+ 0%,
+  100% {
+  transform: translateY(0%) scale(1);
+  opacity: 1;
+ }
+
+ 50% {
+  transform: translateY(-66%) scale(0.65);
+  opacity: 0.8;
+ }
+}
+
+@keyframes wobble2 {
+ 0%,
+  100% {
+  transform: translateY(0%) scale(1);
+  opacity: 1;
+ }
+
+ 50% {
+  transform: translateY(66%) scale(0.65);
+  opacity: 0.8;
+ }
+}
+
+
+  #down{
+    display: none;
+  }
+
+  @media (max-width:768px) {
+    #right{
+      display: none;
+      }
+      #down{
+        display: inline-block;
+      }
+  }
+</style>
 </head>
 <body>
+
+  <div class="loader">
+    <div class="three-body">
+      <div class="three-body__dot one"></div>
+      <div class="three-body__dot two"></div>
+      <div class="three-body__dot three"></div>
+      </div>
+  </div>
 
   <header id="navbar">
         <div class="top_section">
@@ -53,18 +212,18 @@
         <div class="top_section_2"></div>
 
         <nav id="nav">
-            <img class="logo" src="image/logo-min.png" alt="">
+            <img class="logo" src="image/logo-min.png" alt="logo">
 
             <div class="navlink">
                 <a href="index.html" class="home_link">Home</a>
                 <a href="about.html" class="about_link">About Us</a>
                 <a href="service.html" class="service_link">Services</a>
-                <a href="">Career</a>
+                <a href="career.html">Career</a>
                 <a href="join.html" class="join_link">Join Us</a>
                 <a href="contact.html" class="contact_link">Contact</a>
             </div>
 
-            <a href="#help" class="btn nav_btn">Get Started <i class='bx bx-right-arrow-alt' id="right"></i></a>
+            <a href="#help" class="btn nav_btn">Get Started <i class='bx bx-right-arrow-alt' id="right"></i><i class='bx bx-down-arrow-alt' id="down"></i></a>
             <i class="bx bx-menu" id="menu"></i>
         </nav>
     </header>
@@ -105,7 +264,7 @@
             
             <div class="service_container">
                 <div class="service_box one">
-                  <a href="./services/companion.html"><img src="image/male-min.png" alt="" /></a>
+                  <a href="./services/companion.html"><img src="image/male-min.jpg" alt="Companion_image" loading="lazy" /></a>
         
                   <div class="service_content">
                     <h4>Companion Services</h4>
@@ -114,7 +273,7 @@
                 </div>
     
                 <div class="service_box two">
-                   <a href="./services/personal.html"><img src="image/services_pic-min.jpg" alt="" /></a>
+                   <a href="./services/personal.html"><img src="image/services_pic-min_2.jpg" alt="Personal_care_image" loading="lazy" /></a>
           
                     <div class="service_content">
                       <h4>Personal Care</h4>
@@ -123,7 +282,7 @@
                   </div>
         
                 <div class="service_box three">
-                  <a href="./services/caregiver.html"><img src="image/new_image-min.jpg" alt="" /></a>
+                  <a href="./services/caregiver.html"><img src="image/new_image-min_2.jpg" alt="Caregiver_image" loading="lazy" /></a>
         
                   <div class="service_content">
                     <h4>Live In Caregiver</h4>
@@ -259,12 +418,12 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="service.html">Services</a>
-                <a href="#">Career</a>
+                <a href="career.html">Career</a>
                 <a href="join.html">Join Us</a>
                 <a href="contact.html">Contact</a>
             </div>
 
-            <img class="logo" src="image/logo-min.png" alt="">
+            <img class="logo" src="image/logo-min.png" alt="logo">
 
             <p>Copyright &copy; 2023 | All Rights Reserved.</p>
           </div>
@@ -274,9 +433,28 @@
 
       <!-- SCROLL REVEAL -->
      <script src="https://unpkg.com/scrollreveal"></script>
-     <script src="js/scroll.js"></script>
 
      <!-- CUSTOM CSS -->
     <script src="JS/script.js"></script>
+    
+    <script>
+      ScrollReveal({
+    // reset: true,
+    distance: '200px',
+    duration: 2500,
+    delay: 200
+});
+
+
+
+ScrollReveal().reveal('#main', { origin: 'top' });
+
+
+ScrollReveal().reveal('.main_content, .one, .inputs', { origin: 'left' });
+
+ScrollReveal().reveal('.two,.three,.home_btn', { origin: 'right' });
+
+ScrollReveal().reveal('')
+    </script>
 </body>
 </html>
